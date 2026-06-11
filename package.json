@@ -1,0 +1,36 @@
+{
+  "name": "playwright_automation_session_one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tagrun": "npx playwright test --grep @reg",
+    "basictest": "npx playwright test ./tests/basic.spec.js",
+    "test1": "npx cucumber-js --tags \"@test1\" --format html:reports/test1-report.html",
+    "data-driven": "npx cucumber-js --tags \"@data-driven\" --format html:reports/data-driven-report.html",
+    "allure-report-open": "allure open",
+     "data-driven-allure": "npx cucumber-js --tags \"@data-driven\" \"allure generate allure-results --clean\"  && npm run allure-report-open --exit",
+
+  "clean-report": "rmdir allure-results, allure-report -Recurse -Force",
+  "test": "cucumber-js",
+  "report": "allure generate allure-results --clean",
+  "report-open": "allure open",
+  "test-report": "npm run test && npm run report && npm run report-open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.5.0",
+    "allure-commandline": "^2.42.0",
+    "allure-cucumberjs": "^3.9.0",
+    "allure-playwright": "^3.8.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "exceljs": "^3.4.0"
+  }
+}
