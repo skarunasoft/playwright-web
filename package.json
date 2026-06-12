@@ -14,7 +14,7 @@
   "test": "cucumber-js",
   "report": "allure generate allure-results --clean",
   "report-open": "allure open",
-  "test-report": "npm run test && npm run report && npm run report-open"
+  "test-report": "npm run test && npm run report"
   },
   "keywords": [],
   "author": "",
